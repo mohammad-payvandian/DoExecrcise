@@ -13,7 +13,10 @@ class MainActivity : AppCompatActivity() {
 //        Log.d("mohammad","$value")
 //        (--------------)
 //        Rectangle(5,7)
+        val number = maxList(listOf(34,50,8700,90,200,150,58,2))
+        Log.d("mohammad","Max Number : $number")
     }
+
 
 //    fun sum(a:Int,b:Int):String {
 //        return if (a % b == 0){
@@ -32,6 +35,14 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
-
+    fun maxList(listNumber: List<Int>):Int {        // 98,60,35,100,200,1
+        var max = listNumber.first()        // max = 98
+        for (i in listNumber){              // i = 98   i = 60,35,100,200
+            if (i > max){
+                max = i                     // max = 100,200
+            }
+        }
+        return max
+    }
 
 }
