@@ -13,8 +13,11 @@ class MainActivity : AppCompatActivity() {
 //        Log.d("mohammad","$value")
 //        (--------------)
 //        Rectangle(5,7)
-        val number = maxList(listOf(34,50,8700,90,200,150,58,2))
-        Log.d("mohammad","Max Number : $number")
+//        (--------------)
+//        val number = maxList(listOf(34,50,8700,90,200,150,58,2))
+//        Log.d("mohammad","Max Number : $number")
+//        (--------------)
+        Log.d("mohammad","${week(5)}")
     }
 
 
@@ -34,15 +37,35 @@ class MainActivity : AppCompatActivity() {
 //            println()
 //        }
 //    }
+//    (--------------)
 
-    fun maxList(listNumber: List<Int>):Int {        // 98,60,35,100,200,1
-        var max = listNumber.first()        // max = 98
-        for (i in listNumber){              // i = 98   i = 60,35,100,200
-            if (i > max){
-                max = i                     // max = 100,200
+//    fun maxList(listNumber: List<Int>):Int {        // 98,60,35,100,200,1
+//        var max = listNumber.first()        // max = 98
+//        for (i in listNumber){              // i = 98   i = 60,35,100,200
+//            if (i > max){
+//                max = i                     // max = 100,200
+//            }
+//        }
+//        return max
+//    }
+//    (--------------)
+
+    fun week(a: Int): String {
+        return if (a > 30) {
+            "Invalid"
+        } else {
+            when (a % 7) {
+                0 -> "Friday"
+                1 -> "Saturday"
+                2 -> "Sunday"
+                3 -> "Monday"
+                4 -> "Tuesday"
+                5 -> "Wednesday"
+                6 -> "Thursday"
+                else -> "Unknown"
             }
         }
-        return max
     }
+
 
 }
