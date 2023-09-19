@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 //        (--------------)
 //        Log.d("mohammad","${week(5)}")
 //        (--------------)
-//        val num = ave(listOf(11,17,15,4,18,20))
-//        Log.d("mohammad","Average = $num")
+        val num = ave(listOf(11,17,15,4,18,20))
+        Log.d("mohammad","Average = $num")
 //        (--------------)
 //        val value = one(listOf(1,3,5,1,0,19,0))
 //        Log.d("mohammad","The Number of one is $value")
@@ -28,11 +28,8 @@ class MainActivity : AppCompatActivity() {
 //        val names = name(listOf("Mohammad","Ali","Hasan","Melika","Mahdi","Mohammad"))
 //        Log.d("mohammad","$names")
 //        (--------------)
-//        val number = value(listOf(3,5,39,2,20))
-//        Log.d("mohammad","$number")
-//        (--------------)
-        val a = value(listOf(24,90,3,1,66))
-        Log.d("mohammad","$a")
+//        val a = value(listOf(24,90,3,1,66))
+//        Log.d("mohammad","$a")
 
     }
 
@@ -84,13 +81,13 @@ class MainActivity : AppCompatActivity() {
 //    }
 //    (--------------)
 
-//    fun ave(average: List<Int>):Int{
-//        var a = 0
-//        for (i in average){
-//            a += i
-//        }
-//        return a / average.size
-//    }
+    fun ave(average: List<Int>):Int{
+        var a = 0
+        for (i in average){
+            a += i
+        }
+        return a / average.size
+    }
 //    (--------------)
 
 //    fun one(number: List<Int>):Int{
@@ -115,21 +112,9 @@ class MainActivity : AppCompatActivity() {
 //    }
 //    (--------------)
 
-//    fun value(num: List<Int>): Int {
-//        var a = 0
-//        for (i in num){
-//            if (i > 0){
-//                a == i % 10
-//                a == i / 10
-//            }
-//        }
-//        return a
+//    fun value(number: List<Int>): List<Int> {
+//        return number
 //    }
-//    (--------------)
-
-    fun value(number: List<Int>): List<Int> {
-        return number
-    }
 
 
 }
