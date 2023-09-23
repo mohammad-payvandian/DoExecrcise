@@ -31,9 +31,13 @@ class MainActivity : AppCompatActivity() {
 //        val a = value(listOf(24,90,3,1,66))
 //        Log.d("mohammad","$a")
 //        (--------------)
-        val listResult = newList(listOf(80,5,3,90,25,15))       //listResult(83,8,6,93,28,18)
-        for (i in listResult){                                  //i = 83 , i = 8
-            Log.d("mohammad","$i")           //listResult(83,8,,6,93,28,18)
+//        val listResult = newList(listOf(80,5,3,90,25,15))       //listResult(83,8,6,93,28,18)
+//        for (i in listResult){                                  //i = 83 , i = 8
+//            Log.d("mohammad","$i")           //listResult(83,8,,6,93,28,18)
+//        }
+        val result = towList(listOf(20,1,39,4,5))
+        for (i in result){
+            Log.d("mohammad","$i")
         }
 
     }
@@ -122,16 +126,23 @@ class MainActivity : AppCompatActivity() {
 //    }
 //    (--------------)
 
-    fun newList(value:List<Int>): List<Int> {           //(80,5)
-        var b = 0                                       //b = 0
-        val listPlus = mutableListOf<Int>()             //listPlus()
-        for (i in value){                               //i = 80, i = 5
-            b = i + 3                                   //b = 83, b = 8
-            listPlus.add(b)                             //listPlus(83,8)
-        }
-        return listPlus
-    }
+//    fun newList(value:List<Int>): List<Int> {           //(80,5)
+//        var b = 0                                       //b = 0
+//        val listPlus = mutableListOf<Int>()             //listPlus()
+//        for (i in value){                               //i = 80, i = 5
+//            b = i + 3                                   //b = 83, b = 8
+//            listPlus.add(b)                             //listPlus(83,8)
+//        }
+//        return listPlus
+//    }
 
+    fun towList(listNumber: List<Int>):List<Int> {
+        val listMohammad = mutableListOf<Int>()
+        for (i in listNumber) {
+            listMohammad.add(listNumber.indexOf(i) + i + 1  )
+        }
+        return listMohammad
+    }
 
 }
 
