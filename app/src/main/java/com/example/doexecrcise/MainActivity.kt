@@ -35,7 +35,13 @@ class MainActivity : AppCompatActivity() {
 //        for (i in listResult){                                  //i = 83 , i = 8
 //            Log.d("mohammad","$i")           //listResult(83,8,,6,93,28,18)
 //        }
-        val result = towList(listOf(20,1,39,4,5))
+//        (--------------)
+//        val result = towList(listOf(20,1,39,4,5))
+//        for (i in result){
+//            Log.d("mohammad","$i")
+//        }
+//        (--------------)
+        val result = commonList(listOf(20,2,8,50), listOf(30,2,8,8))
         for (i in result){
             Log.d("mohammad","$i")
         }
@@ -135,14 +141,33 @@ class MainActivity : AppCompatActivity() {
 //        }
 //        return listPlus
 //    }
+//    (--------------)
 
-    fun towList(listNumber: List<Int>):List<Int> {
-        val listMohammad = mutableListOf<Int>()
-        for (i in listNumber) {
-            listMohammad.add(listNumber.indexOf(i) + i + 1  )
+//    fun towList(listNumber: List<Int>):List<Int> {
+//        val listMohammad = mutableListOf<Int>()
+//        for (i in listNumber) {
+//            listMohammad.add(listNumber.indexOf(i) + i + 1  )
+//        }
+//        return listMohammad
+//    }
+//    (--------------)
+
+    fun commonList(list1: List<Int>,list2: List<Int>):List<Int>{        //list1 = 2,2,2,50
+        val listMosh = mutableListOf<Int>(0)                             //list2 = 40,2,12,11
+        for (i in list1){                                             // i = 2
+            for (j in list2){                                        // j = 40,2
+                if (i == j){                                         // listMosh =
+                    if (listMosh.none { it == i }){
+                        listMosh.add(i)
+                    }
+//                    if (!listMosh.contains(i)){
+//                        listMosh.add(i)
+//                    }
+                }
+            }
         }
-        return listMohammad
+        return listMosh
     }
 
-}
 
+}
